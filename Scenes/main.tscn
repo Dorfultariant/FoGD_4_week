@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://guu5y8h3gqkg"]
+
+[ext_resource type="Script" uid="uid://c1c7cgvgtwh3j" path="res://Scripts/main.gd" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://blftd8xtq3lcw" path="res://Scenes/player.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://ci42kjccage5v" path="res://Scenes/level_1.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://yts8p0yq0asc" path="res://Scenes/level_2.tscn" id="3_jjvhh"]
+
+[node name="main" type="Node"]
+script = ExtResource("1_bo1nx")
+levels = Array[PackedScene]([ExtResource("2_8gbba"), ExtResource("3_jjvhh")])
+
+[node name="CurrentLevel" type="Node" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("1_jjgbg")]
+position = Vector2(106, -143)
